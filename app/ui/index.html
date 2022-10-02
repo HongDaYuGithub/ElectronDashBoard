@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="themes/gray/easyui.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easyui.min.js"></script>
+    <title>dashboard</title>
+</head>
+
+<body>
+    <div style="margin:20px 0;"></div>
+    <div class="easyui-layout" data-options="fit:true">
+        <div data-options="region:'north',split:true" style="height:45px">
+            <div id="tb" style="height:auto;padding:2px">
+                <select id="SelectAppMode" class="easyui-combobox" style="width:200px;" data-options="disable:true">
+                    <option>Topology</option>
+                </select>
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" id="Refresh"
+                    style="height:auto" style="padding:5px;"><i><img
+                            src="../../node_modules/feather-icons/dist/icons/refresh-cw.svg"
+                            style="height:10px;">refresh</i></a>
+                <select id="SelectConnectMode" class="easyui-combobox" style="width:200px;" data-options="disable:true">
+                    <option>IPV4 UDP</option>
+                    <option>IPV4 HTTP</option>
+                    <option>IPV4 FTP</option>
+                </select>
+
+                <input id="ipInput" class="easyui-textbox" style="padding: 5px;" value="">
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" id="Connect"
+                    style="height:auto" style="padding:5px;"><i><img
+                            src="../../node_modules/feather-icons/dist/icons/link.svg"
+                            style="height:10px;">connect</i></a>
+                <select id="SelectDev" class="easyui-combobox" style="width:200px;">
+                </select>
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" id="Upgrade"
+                    style="height:auto" style="padding:5px"><i><img
+                            src="../../node_modules/feather-icons/dist/icons/upload.svg"
+                            style="height:10px;">upgrade</i></a>
+            </div>
+        </div>
+        <div data-options="region:'west',split:true" style="width:250px">
+            <div style="margin:10px 0;"></div>
+            <div class="easyui-panel" style="padding:5px">
+                <ul id="tt" class="easyui-tree" data-options="animate:true,lines:true">
+                </ul>
+            </div>
+        </div>
+        <div id="CenterSpace" data-options="region:'center'">
+            <iframe id="content" style="display: block;width:100%;border:none;height:100%;"></iframe>
+        </div>
+    </div>
+    <script src='../renderer.js'>
+    </script>
+</body>
+
+</html>

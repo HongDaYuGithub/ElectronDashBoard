@@ -1,0 +1,19 @@
+{
+  "name": "easydesktop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "dgram": "^1.0.1",
+    "electron": "^21.0.1",
+    "feather-icons": "^4.29.0",
+    "ftp": "^0.3.10"
+  }
+}
